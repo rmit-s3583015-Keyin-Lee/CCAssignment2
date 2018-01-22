@@ -1,0 +1,13 @@
+body {
+    background-color: lightblue;
+}
+
+ .nav {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+.sitemap {
+    text-align: center;
+    color: aqua; 
+}
