@@ -8,6 +8,61 @@
 </head>
 
 <body>
+    <div class = "slide_container">
+        <div class = "myslides fade">
+            <div class = "numtext"> 1 </div>
+            <img src = "/static/images/1.jpeg" style = "width:100%">
+        
+        </div>
+
+    
+        <div class = "myslides fade">
+            <div class = "numtext"> 2 </div>
+            <img src = "/static/images/2.jpeg" style = "width:100%">
+
+        </div>
+
+    <a class = "pre" onclick = "plusSlide(-1)">&#10094;</a>
+    <a class = "next" onclick = "plusSlide(1)">&#10095;</a>
+</div>
+<br>
+    <div style = "text-align:center">
+        <span class = "dot" onclick = "currentSlide(1)"></span>
+        <span class = "dot" onclick = "currentSlide(2)"></span>
+       
+    </div>
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("myslides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
     <nav>
         <div class="nav">
             <a href="#home">What's Hot</a>
