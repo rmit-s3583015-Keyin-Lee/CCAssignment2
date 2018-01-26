@@ -1,9 +1,35 @@
-application: s3583015-cc2018
+application: s3657664-assignment2
 version: 1
 runtime: php55
 api_version: 1
 
 handlers:
-- url: /.*
+  
+- url: /static
+  static_dir: static
+  
+- url: /mazerunner\.php
+  script: mazerunner.php
+  
+- url: /insidious\.php
+  script: insidious.php
+  
+- url: /jumanji\.php
+  script: jumanji.php
+  
+- url: /commuter\.php
+  script: commuter.php
+  
+- url: /pitchperfect\.php
+  script: pitchperfect.php
+
+- url: /ticket\.html
+  script: ticket.html
+  
+- url: .*
   script: index.php
+
+
+
+
 

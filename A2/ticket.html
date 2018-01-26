@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<script type="text/javascript">
+		
+			function calc(){
+				var n1 = parseInt(document.getElementById('quantity').value);
+				var total = 0;
+				total = (n1 * 13).toFixed(2);
+				document.getElementById('result').value = total;
+			}
+			
+			function calc1(){
+				var n1 = parseInt(document.getElementById('quantity1').value);
+				var total = 0;
+				total = (n1 * 13).toFixed(2);
+				document.getElementById('result1').value = total;
+			}
+			
+			function calc2(){
+				var n1 = parseInt(document.getElementById('quantity2').value);
+				var total = 0;
+				total = (n1 * 13).toFixed(2);
+				document.getElementById('result2').value = total;
+			}
+			
+			function calc3(){
+				var n1 = parseInt(document.getElementById('quantity3').value);
+				var total = 0;
+				total = (n1 * 13).toFixed(2);
+				document.getElementById('result3').value = total;
+			}
+			
+			function calc4(){
+				var n1 = parseInt(document.getElementById('quantity4').value);
+				var total = 0;
+				total = (n1 * 13).toFixed(2);
+				document.getElementById('result4').value = total;
+			}
+			
+			function total(){
+				var n1 = parseInt(document.getElementById('result').value);
+				var n2 = parseInt(document.getElementById('result1').value);
+				var n3 = parseInt(document.getElementById('result2').value);
+				var n4 = parseInt(document.getElementById('result3').value);
+				var n5 = parseInt(document.getElementById('result4').value);
+
+				var total = (n1+n2+n3+n4+n5).toFixed(2);
+				document.getElementById('totalPrice').value = total;
+			}
+		</script>
+
+		
+	</head>
+	<body>
+		<form action="destination.html" method="GET">
+			<table>
+				<tr>
+					<th>Ticket Type</th>
+					<th>Price</th>
+					<th>Quantity</th>
+					<th>Subtotal</th>
+				</tr>
+				
+				<tr>
+					<td>Adult</td>
+					<td>$13.00</td>
+					<td>
+					<select id="quantity" onchange="calc(); total();">
+						<option value="0">0</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+					</select>
+					
+					</td>
+					<td>$<output name="result" id="result">0.00</output></td>
+				</tr>
+				
+				<tr>
+					<td>Child</td>
+					<td>$13.00</td>
+					<td>
+					<select id="quantity1" onchange="calc1(); total();">
+						<option value="0">0</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+					</select>
+					</td>
+					<td>$<output name="result1" id="result1">0.00</output></td>
+				</tr>
+				
+				<tr>
+					<td>Student</td>
+					<td>$13.00</td>
+					<td>
+					<select id="quantity2" onchange="calc2(); total();">
+						<option value="0">0</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+					</select>
+					</td>
+					<td>$<output name="result2" id="result2">0.00</output></td>
+				</tr>
+				
+				<tr>
+					<td>Concession</td>
+					<td>$13.00</td>
+					<td>
+					<select id="quantity3" onchange="calc3(); total();">
+						<option value="0">0</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+					</select>
+					</td>
+					<td>$<output name="result3" id="result3">0.00</output></td>
+				</tr>
+				
+				<tr>
+					<td>Senior</td>
+					<td>$13.00</td>
+					<td>
+					<select id="quantity4" onchange="calc4(); total();">
+						<option value="0">0</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+					</select>
+					</td>
+					<td>$<output name="result4" id="result4">0.00</output></td>
+				</tr>
+			</table>
+			
+			
+			<div class="summary">
+			Purchase Summary<br>
+			<img src=""/>
+			Tickets<br>
+			Total Price $<output name="totalPrice" id="totalPrice">0.00</output>
+			</div>
+			
+			
+		
+
+	</body>
+	
+</html>
